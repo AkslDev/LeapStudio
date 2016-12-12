@@ -6,6 +6,13 @@ import {canvas, ctx} from './canvas';
 import {to2D, draw_circle , stroke} from './utils';
 import {Ball} from './ball';
 
+// Class
+import {tool} from './tools';
+// import {Color} from './class_color';
+import {Eraser} from './class_eraser';
+// import {tool_color} from './tool_color';
+
+
 let balls = [];
 
 // Leap

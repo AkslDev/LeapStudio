@@ -1,4 +1,4 @@
-# Simple Webpack JS starter
+# LeapStudio
 
 ## Initialisation du pack
 

@@ -1,0 +1,175 @@
+/* *********** Feuille de style de l'index *********** */
+	/* *********** Importation de Police *********** */
+@font-face {
+	src:url('../fonts/Lane-Narrow.ttf');
+	font-family: 'LaneNarrow';
+	font-weight:normal;
+	font-style:normal;
+}
+html{
+	overflow-x: none;
+	overflow-y: none;
+	width:100%;
+	height:660px;
+}
+/* *********** Stylisation du body  *********** */
+body{
+	margin: 0;
+	padding: 0;
+	font-family:"LaneNarrow";
+	background-color:#e0e0e0;
+	cursor:crosshair;
+}
+
+/* *********** Stylisation du Canvas *********** */
+canvas{
+	display:block;  
+	background-color: #BCBCBC;
+}
+/* *********** Stylisation de la Nav*********** */
+.divlogo{
+	width: 150px;
+	margin: 0;
+	z-index: 10000;
+	position: absolute;
+	background-color: #FBFBFB;
+	height: 75px;
+	margin-top: -15px;
+	padding:10px 32px;
+	box-shadow: 2px 2px 3px #bfbfbf;
+	border-right:1px solid #e5e5e5;
+	border-bottom:1px solid #e5e5e5;
+}
+.logo{
+	color: #0099ff;
+	font-size: 1.4em;
+	m
+}
+.pot{
+	font-size: 1.9em;
+	margin-left: 14px;
+}
+#eraser{
+	margin-bottom: 40px;
+}
+
+.icon-paint-format:before {
+  content: "\e90c";
+}
+.palette{
+	margin: 0 auto;
+	width: 25px;
+	height: 25px;
+	border: 0px solid;
+    	border-radius: 15px;
+    	margin-bottom: 14px;
+}
+.colorblue{
+	background-color:#0099ff;
+}
+.colorgreen{
+		background-color:#2bad29;
+}
+.colororange{
+		background-color:#ff8c00;
+}
+.coloryellow{
+		background-color:#ffe500;
+}
+.colorred{
+		background-color:#d62020;
+}
+.colorblack{
+		background-color:#161616;
+}
+.palette:hover{
+	    transform: scale(1.2);
+}	
+#zone_dessin canvas{
+	position: absolute;
+	right:9px;
+	top: 7px;
+	background-color: #D3D3D3;
+}
+/*Stylisation de la side bar*/
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+.main-menu {
+background:#FBFBFB;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+padding-top: 125px;
+}
+
+.main-menu a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+.selected{
+	transform: scale(1.5)!important;
+}
+.tool-selected{
+	transform: scale(1.5)!important;
+	color: #0099ff!important;
+}
+#palette{
+	margin-top: 30px;
+}
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+	z-index: 1000;
+}
+
+.main-menu a:hover{
+color:#0099ff;
+transform: scale(1.2);
+transition: all 0.355s ease-in-out;
+}
+.area {
+float: left;
+background:red;
+width: 100%;
+height: 100%;
+}
