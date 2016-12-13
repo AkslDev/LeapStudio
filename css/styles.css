@@ -24,6 +24,7 @@ body{
 /* *********** Stylisation du Canvas *********** */
 canvas{
 	display:block;  
+	width: 100%;
 	background-color: #BCBCBC;
 }
 /* *********** Stylisation de la Nav*********** */
