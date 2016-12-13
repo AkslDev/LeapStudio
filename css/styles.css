@@ -19,6 +19,7 @@ body{
 	font-family:"LaneNarrow";
 	background-color:#e0e0e0;
 	cursor:crosshair;
+	overflow-y: hidden;
 }
 
 /* *********** Stylisation du Canvas *********** */

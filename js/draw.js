@@ -1,3 +1,5 @@
+$('#leap_disco').modal();
+
 let controllerOptions = { enableGestures: true },
     width = 920,
     height = 980,
@@ -11,9 +13,13 @@ let controllerOptions = { enableGestures: true },
     after = {},
     color = d3.scale.category20();
 
+canvas.width = width;
+canvas.height = height;
+
 ctx.lineWidth = 5;
 ctx.translate(width/2, height/2);
 
+// Function qui permet de dessiner
 function draw() {
     let a, b;
 
@@ -31,6 +37,16 @@ function draw() {
 
     before = after;
 }
+// Function qui permet d'effacer le canvas
+function eraser(){
+        // I have lots of transforms right now
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    // Will always clear the right space
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
+    // Still have my old transforms
+}
 
 Leap.loop(controllerOptions, function(frame, done) {
     after = {};
@@ -40,3 +56,6 @@ Leap.loop(controllerOptions, function(frame, done) {
     draw();
     done();
 });
+
+
+

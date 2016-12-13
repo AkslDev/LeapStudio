@@ -16,17 +16,26 @@
 		<!-- Début de la Navigation -->
 		<nav class="main-menu">
 			<div id="palette-tool">
-				<!-- Crayon -->
-				<a href="#">
+				<!-- Gomme -->
+				<a id="eraser" href="#">
 					<i class="fa fa-eraser fa-2x"></i>
 				</a>
 			</div>
 		</nav>
+		 <!-- Modal Structure -->
+		  <div id="leap_disco" class="modal">
+		    <div class="modal-content">
+		      <h4>LeapMotion déconnecté...</h4>
+		      <img width="100%" src="img/lip.gif" alt="">
+		    </div>
+		  </div>
 		<div id='draw_zone'></div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="js/lib/leap.js"></script>
+		<script src="js/materialize.min.js"></script>
 		<script src='js/lib/d3.v3.min.js'></script>
+		<script src='js/controller.js'></script>
 		<script src='js/draw.js'></script>
 	</body>
 </html>
