@@ -12,6 +12,7 @@ $('#eraser').on('click', function () {
 	eraser();
 });
 
+// Berk... 
 $('#black').on('click', function () {
 	chose_color('black');
 });
