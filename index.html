@@ -20,12 +20,18 @@
 				<a id="eraser" href="#">
 					<i class="fa fa-eraser fa-2x"></i>
 				</a>
+				<ul id="colors">
+					<a href="#" class="palette selected" id="black" title="Noir" style="background-color: black;"></a>
+					<a href="#" class="palette" id="blue" title="Bleu" style="background-color: blue;"></a>
+					<a href="#" class="palette" id="orange" title="Orange" style="background-color: orange;"></a>
+					<a href="#" class="palette" id="red" title="Rouge" style="background-color: red;"></a>
+					<a href="#" class="palette" id="green" title="Vert" style="background-color: green;"></a>
+				</ul>
 			</div>
 		</nav>
 		 <!-- Modal Structure -->
 		  <div id="leap_disco" class="modal">
 		    <div class="modal-content">
-		      <h4>LeapMotion déconnecté...</h4>
 		      <img width="100%" src="img/lip.gif" alt="">
 		    </div>
 		  </div>
@@ -35,7 +41,7 @@
 		<script src="js/lib/leap.js"></script>
 		<script src="js/materialize.min.js"></script>
 		<script src='js/lib/d3.v3.min.js'></script>
-		<script src='js/controller.js'></script>
 		<script src='js/draw.js'></script>
+		<script src='js/controller.js'></script>
 	</body>
 </html>

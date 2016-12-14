@@ -22,6 +22,11 @@ body{
 	overflow-y: hidden;
 }
 
+.modal{
+	z-index: 999;
+
+}
+
 /* *********** Stylisation du Canvas *********** */
 canvas{
 	display:block;  

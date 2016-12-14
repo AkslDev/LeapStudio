@@ -1,7 +1,6 @@
 $('#leap_disco').modal();
 
-let controllerOptions = { enableGestures: true },
-    width = 920,
+let width = 920,
     height = 980,
     canvas = d3.select('div#draw_zone')
         .append('canvas')
@@ -28,7 +27,7 @@ function draw() {
         a = after[id];
         if (!b) continue;
 
-        ctx.strokeStyle = color(id);
+        ctx.strokeStyle = color_selected;
         ctx.moveTo(b.tipPosition.x, -b.tipPosition.y);
         ctx.lineTo(a.tipPosition.x, -a.tipPosition.y);
         ctx.stroke();
@@ -48,14 +47,6 @@ function eraser(){
     // Still have my old transforms
 }
 
-Leap.loop(controllerOptions, function(frame, done) {
-    after = {};
-    for (let i = 0; i < frame.pointables.length; i++) {
-        after[frame.pointables[i].id] = frame.pointables[i];
-    }
-    draw();
-    done();
-});
 
 
 
