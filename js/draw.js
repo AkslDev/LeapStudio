@@ -1,5 +1,3 @@
-$('#leap_disco').modal();
-
 let width = 920,
     height = 980,
     canvas = d3.select('div#draw_zone')
@@ -15,12 +13,16 @@ let width = 920,
 canvas.width = width;
 canvas.height = height;
 
-ctx.lineWidth = 5;
 ctx.translate(width/2, height/2);
 
 // Function qui permet de dessiner
-function draw() {
+function draw(lineWidth) {
     let a, b;
+    if(lineWidth == null){
+        ctx.lineWidth = 4;
+    }else{
+        ctx.lineWidth = lineWidth;    
+    }
 
     for (let id in after) {
         b = before[id],
@@ -37,7 +39,7 @@ function draw() {
     before = after;
 }
 // Function qui permet d'effacer le canvas
-function eraser(){
+function trash(){
         // I have lots of transforms right now
     ctx.save();
     ctx.setTransform(1, 0, 0, 1, 0, 0);

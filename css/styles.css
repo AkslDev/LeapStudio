@@ -27,6 +27,10 @@ body{
 
 }
 
+#eraser.selected{
+	color: #0099ff;
+}
+
 /* *********** Stylisation du Canvas *********** */
 canvas{
 	display:block;  
