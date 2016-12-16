@@ -16,12 +16,12 @@ canvas.height = height;
 ctx.translate(width/2, height/2);
 
 // Function qui permet de dessiner
-function draw(lineWidth) {
+function draw(rotate) {
     let a, b;
-    if(lineWidth == null){
+    if(rotate == null){
         ctx.lineWidth = 4;
     }else{
-        ctx.lineWidth = lineWidth;    
+        ctx.lineWidth = rotate;
     }
 
     for (let id in after) {
@@ -40,13 +40,10 @@ function draw(lineWidth) {
 }
 // Function qui permet d'effacer le canvas
 function trash(){
-        // I have lots of transforms right now
     ctx.save();
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    // Will always clear the right space
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.restore();
-    // Still have my old transforms
 }
 
 

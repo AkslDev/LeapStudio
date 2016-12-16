@@ -22,6 +22,10 @@ body{
 	overflow-y: hidden;
 }
 
+.none{
+	display: none;
+}
+
 .modal{
 	z-index: 999;
 
@@ -31,6 +35,37 @@ body{
 	color: #0099ff;
 }
 
+div#tutos_fist_right  {
+    width: 400px;
+    position: fixed;
+	right: 50px;
+	background: white;
+	top: 50px;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+}
+div#tutos_fist_right  h4{
+    text-align: center;
+}
+div#tutos_fist_right img {
+	display: block;
+    max-width: 80%;
+    margin: -10% auto 20px;
+}
+
+div#tutos_eraser_left  {
+    width: 500px;
+    position: fixed;
+	left: 120px;
+	background: white;
+	top: 150px;
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+}
+
+div#tutos_eraser_left video {
+	display: block;
+    max-width: 100%;
+    margin: 0% auto;
+}
 /* *********** Stylisation du Canvas *********** */
 canvas{
 	display:block;  

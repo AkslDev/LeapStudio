@@ -3,6 +3,14 @@ let eraser = false;
 $('#leap_disco').modal();
 $('#modal1').modal();
 
+setTimeout(function(){
+	$('#tutos_fist_right').addClass('none');
+}, 3000);
+
+setTimeout(function(){
+	$('#tutos_eraser_left').addClass('none');
+}, 6600);
+
 function chose_color(color){
 	if(color == 'eraser'){
 		color_selected = '#bcbcbc';
@@ -16,12 +24,7 @@ function chose_color(color){
 }
 
 $('#trash').on('click', function () {
-	 $('#modal1').modal('open');
-});
-
-$('#trash_yes').on('click', function () {
 	trash();
-	eraser = false;
 });
 
 // Berk... 
@@ -58,7 +61,6 @@ Leap.loop({enableGestures: true}, function(frame, done) {
 	$('#leap_disco').modal('close');
 
 	if (frame.hands.length > 0) {
-		console.log(frame.hands[0].sphereRadius);
 		if (frame.hands[0].sphereRadius > 37) {
 			drawing = true;
 		}else{
@@ -73,7 +75,10 @@ Leap.loop({enableGestures: true}, function(frame, done) {
 	        after[frame.pointables[i].id] = frame.pointables[i];
 	    }
 	    if(eraser == true){
-	    	draw(30);
+	    	if (frame.hands.length > 0) {
+		    	let rotate = Math.round(frame.hands[0].palmPosition.y)-49;
+		    	draw(rotate);
+	    	}
 	    }else{
 	    	draw();
 	    }
