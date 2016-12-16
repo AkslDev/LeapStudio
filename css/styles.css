@@ -52,6 +52,12 @@ div#tutos_fist_right img {
     margin: -10% auto 20px;
 }
 
+.divlogo img {
+    max-width: 160px;
+    margin-top: 5px;
+    margin-left: -26px;
+}
+
 div#tutos_eraser_left  {
     width: 500px;
     position: fixed;
